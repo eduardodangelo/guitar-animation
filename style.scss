@@ -1,0 +1,257 @@
+/* Variables */
+
+$sky: #74aec0;
+$wood: #985339;
+$lightwood: #985339 * 1.1;
+$darkwood: #985339 * 0.98;
+$white: #bfcbc7;
+$black: #2c2c2a;
+$accent: #cdc0ae;
+$spot: #5d3328;
+$border: #4d7f8f;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $sky;
+  padding:5rem;
+  border:20px solid $border;
+}
+
+.frame {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  margin-top: 15%;
+  width: 50rem;
+  height: 80rem;
+  overflow:hidden;
+}
+
+.bridge_base {
+  background: $wood;
+  width: 22.9rem;
+  height: 4.2rem;
+  position: absolute;
+  top: 60%;
+  left: 27%;
+  border-top: 2px solid $lightwood;
+  box-shadow: 1px 1px 3px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -48%;
+    left: 10%;
+    width: 18.4rem;
+    height: 2.1rem;
+    background: $darkwood;
+    -webkit-clip-path: polygon(15% 46%, 84% 46%, 100% 0, 0 0);
+    clip-path: polygon(15% 46%, 84% 46%, 100% 0, 0 0);
+        box-shadow: 0px 4px 5px 2px;
+  }
+}
+
+.border_1 {
+  width: 24rem;
+  height: 24rem;
+  border: 2px solid $border;
+  border-radius: 50%;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
+.border_2 {
+  width: 23rem;
+  height: 23rem;
+  background: $accent;
+  border: 2px solid $border;
+  border-radius: 50%;
+  margin: 0.3rem;
+}
+
+.border_3 {
+  width: 21.5rem;
+  height: 21.5rem;
+  background: $sky;
+  border: 2px solid $border;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+.hole {
+  width: 20.6rem;
+  height: 20.6rem;
+  background: rgba($black, .8);
+  border: 2px solid $border;
+  border-radius: 50%;
+  margin: 0.2rem;
+  box-shadow: inset 1px 1px 13px 3px #2b2b2b;
+}
+
+.string{
+    background: $accent;
+    width: 0.1rem;
+    top: 0%;
+    height:.1rem;
+    position: absolute;
+    left: 40%;
+   box-shadow: 1px 1px 1px #94958b;
+  -webkit-animation:tail 1.5s ease-in .6s forwards;
+          animation:tail 1.5s ease-in .6s forwards;
+}
+@-webkit-keyframes tail{
+  100%{
+      top:-3800%;
+      height:49.5rem;
+  }
+}
+@keyframes tail{
+  100%{
+      top:-3800%;
+      height:49.5rem;
+  }
+}
+.delay2{
+   -webkit-animation:tail 1.5s ease-in .5s forwards;
+           animation:tail 1.5s ease-in .5s forwards
+}
+.delay3{
+   -webkit-animation:tail 1.5s ease-in .4s forwards;
+           animation:tail 1.5s ease-in .4s forwards
+}
+
+.peg {
+  border-radius: 50%;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: $accent;
+  position: absolute;
+  top: 50%;
+  box-shadow: 1px 1px 3px #232121;
+
+  &:after {
+    content: "";
+    background: $spot;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    top: 30%;
+    position: absolute;
+    left: 30%;
+  }
+}
+
+.peg_1 {
+  left: 22.5%;
+}
+.peg_2 {
+  left: 35%;
+}
+.peg_3 {
+  left: 45%;
+}
+.peg_4 {
+  left: 55%;
+}
+.peg_5 {
+  left: 65%;
+}
+.peg_6, .jet_6 {
+  left: 75%;
+}
+
+.jet {
+  position: absolute;
+}
+.jet_1{
+  left: 36.5%;
+}
+.jet_2 {
+  left: 42%;
+}
+
+.jet_3{
+  left: 46.5%;
+}
+
+.jet_4 {
+  left: 51%;
+}
+.jet_5 {
+  left: 56%;
+}
+.jet_6 {
+  left: 60.5%;
+}
+
+
+.bridge{
+  background: $accent;
+  width:13.9rem;
+  height: .6rem;
+  position:absolute;
+  top:25%;
+  left:22%;
+  -webkit-transform: rotate(-.5deg);
+      -ms-transform: rotate(-.5deg);
+          transform: rotate(-.5deg);
+  border-radius:10px;
+  box-shadow: 1px 3px 5px #5c3329;
+}
+
+
+.plane{
+  -webkit-transform: translateY(500px);
+      -ms-transform: translateY(500px);
+          transform: translateY(500px);
+   -webkit-animation:fly 1.5s ease-in .6s forwards;
+           animation:fly 1.5s ease-in .6s forwards;
+}
+  .delay-2{
+   -webkit-animation:fly 1.5s ease-in .5s forwards;
+           animation:fly 1.5s ease-in .5s forwards;
+}
+  .delay-3{
+   -webkit-animation:fly 1.5s ease-in .4s forwards;
+           animation:fly 1.5s ease-in .4s forwards;
+}
+
+@-webkit-keyframes fly{
+  100%{
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+  }
+}
+
+@keyframes fly{
+  100%{
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+  }
+}
+
+
+@media all and (max-width: 480px) {
+  html {
+    font-size: 20%;
+  }
+  body{
+    border:0;
+  }
+.frame {
+    position: absolute;
+    -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+            transform: scale(.8);
+ left: -10rem;
+  }
+  .plane{
+  -webkit-transform: translateY(450px);
+      -ms-transform: translateY(450px);
+          transform: translateY(450px);
+}
+  
+}
